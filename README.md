@@ -25,7 +25,7 @@ pdfplumber – Extracting text from business documents (PDFs)
 ### User Interface & Interaction:
 gradio – Web-based GUI for easy text correction
 
-### Approaches Used
+## Approaches Used
 1. Natural Language Processing (NLP)
 Tokenization, part-of-speech tagging, and Named Entity Recognition (NER)
 Stopword removal and lemmatization for better text preprocessing
