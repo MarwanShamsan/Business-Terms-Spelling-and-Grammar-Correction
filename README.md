@@ -1,63 +1,52 @@
 # Business Terms Spelling and Grammar Correction
 
 ## Project Overview
-
-BizTerm Correct is designed for spelling and grammar correction in business terminology, leveraging Natural Language Processing (NLP), machine learning, and phonetic matching. The system processes textual data, detects errors, and provides corrections using advanced linguistic models.
+BizTerm Correct is a system designed for correcting spelling and grammar in business terminology using Natural Language Processing (NLP), machine learning, and phonetic matching. It processes business-related textual data, identifies errors, and provides corrections using advanced linguistic models.
 
 ## Packages Used
+### NLP & Text Processing:
+spacy – Tokenization, Named Entity Recognition (NER)
+nltk – Stopword removal, POS tagging, lemmatization
+transformers – Pre-trained language models for text analysis
+textdistance, fuzzywuzzy, rapidfuzz – Edit distance and similarity matching
+metaphone – Phonetic-based spelling correction
 
-### NLP & Text Processing: 
-spacy, nltk, transformers, textdistance, fuzzywuzzy, rapidfuzz, metaphone
-sklearn.feature_extraction.text.TfidfVectorizer
+### Machine Learning & Feature Engineering:
+sklearn.feature_extraction.text – TF-IDF Vectorization
 
 ### Spelling & Grammar Correction:
-language_tool_python, textdistance.Levenshtein, fuzzywuzzy, rapidfuzz
+language_tool_python – Grammar checking and correction
+textdistance.Levenshtein, fuzzywuzzy, rapidfuzz – Edit distance for spell-checking
 
-Dataset Handling & Extraction: pandas, pdfplumber, PyPDF2
+### Dataset Handling & Business Document Extraction:
+pandas – Data management and preprocessing
+pdfplumber – Extracting text from business documents (PDFs)
 
-### User Interface: 
-gradio
+### User Interface & Interaction:
+gradio – Web-based GUI for easy text correction
 
-## Approaches Used
-
-Natural Language Processing (NLP)
-
+### Approaches Used
+1. Natural Language Processing (NLP)
 Tokenization, part-of-speech tagging, and Named Entity Recognition (NER)
+Stopword removal and lemmatization for better text preprocessing
+TF-IDF vectorization to extract important business-related terms
 
-Stopword removal and lemmatization
-
-TF-IDF vectorization for feature extraction
-
-Spelling & Grammar Correction
-
+2. Spelling & Grammar Correction
 Levenshtein Distance & Edit Distance Algorithms (textdistance, fuzzywuzzy)
-
 Phonetic Matching (Metaphone, RapidFuzz, FuzzyWuzzy)
+Grammar checking using language_tool_python
 
-Grammar validation using language_tool_python
+3. Machine Learning for Business Term Classification
+TF-IDF Vectorization for converting text into numerical features
 
-Machine Learning for Business Term Classification
+4. PDF & Business Document Handling
+Extracting text from PDFs using pdfplumber
+Processing structured business documents to enhance accuracy
 
-Random Forest Classifier trained on business-related text
-
-TF-IDF Vectorization for transforming text into numerical features
-
-PDF & Business Document Handling
-
-Extracting text from PDFs using PyPDF2 and pdfplumber
-
-Processing structured business documents for enhanced accuracy
-
-Graphical User Interface (GUI)
-
+5. Graphical User Interface (GUI) for Usability
 Gradio-based Web UI for quick spelling & grammar correction
 
-
 ## Future Improvements
-
-Integrating deep learning models for advanced spell-checking
-
-Enhancing business-specific terminology detection
-
-Expanding support for multiple languages in business writing
-
+Integrate Deep Learning models (Transformer-based spell-checkers)
+Enhance business-specific terminology detection
+Expand support f
